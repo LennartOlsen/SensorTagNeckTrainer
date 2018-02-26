@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7028C4C5204473BE0067D7A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4C4204473BE0067D7A9 /* AppDelegate.swift */; };
+		7028C4C7204473BE0067D7A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4C6204473BE0067D7A9 /* ViewController.swift */; };
+		7028C4C9204473BE0067D7A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7028C4C8204473BE0067D7A9 /* Assets.xcassets */; };
+		7028C4CC204473BE0067D7A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7028C4CA204473BE0067D7A9 /* Main.storyboard */; };
+		7028C4D8204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4D7204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift */; };
+		7028C4E3204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7028C4D4204473BE0067D7A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7028C4B9204473BE0067D7A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7028C4C0204473BE0067D7A9;
+			remoteInfo = SensorTagNeckTrainer;
+		};
+		7028C4DF204473BE0067D7A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7028C4B9204473BE0067D7A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7028C4C0204473BE0067D7A9;
+			remoteInfo = SensorTagNeckTrainer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7028C4C1204473BE0067D7A9 /* SensorTagNeckTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorTagNeckTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7028C4C4204473BE0067D7A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7028C4C6204473BE0067D7A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7028C4C8204473BE0067D7A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7028C4CB204473BE0067D7A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7028C4CD204473BE0067D7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7028C4CE204473BE0067D7A9 /* SensorTagNeckTrainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorTagNeckTrainer.entitlements; sourceTree = "<group>"; };
+		7028C4D3204473BE0067D7A9 /* SensorTagNeckTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTagNeckTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7028C4D7204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTagNeckTrainerTests.swift; sourceTree = "<group>"; };
+		7028C4D9204473BE0067D7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7028C4DE204473BE0067D7A9 /* SensorTagNeckTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTagNeckTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTagNeckTrainerUITests.swift; sourceTree = "<group>"; };
+		7028C4E4204473BE0067D7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7028C4BE204473BE0067D7A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7028C4D0204473BE0067D7A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7028C4DB204473BE0067D7A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7028C4B8204473BE0067D7A9 = {
+			isa = PBXGroup;
+			children = (
+				7028C4C3204473BE0067D7A9 /* SensorTagNeckTrainer */,
+				7028C4D6204473BE0067D7A9 /* SensorTagNeckTrainerTests */,
+				7028C4E1204473BE0067D7A9 /* SensorTagNeckTrainerUITests */,
+				7028C4C2204473BE0067D7A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7028C4C2204473BE0067D7A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7028C4C1204473BE0067D7A9 /* SensorTagNeckTrainer.app */,
+				7028C4D3204473BE0067D7A9 /* SensorTagNeckTrainerTests.xctest */,
+				7028C4DE204473BE0067D7A9 /* SensorTagNeckTrainerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7028C4C3204473BE0067D7A9 /* SensorTagNeckTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				7028C4C4204473BE0067D7A9 /* AppDelegate.swift */,
+				7028C4C6204473BE0067D7A9 /* ViewController.swift */,
+				7028C4C8204473BE0067D7A9 /* Assets.xcassets */,
+				7028C4CA204473BE0067D7A9 /* Main.storyboard */,
+				7028C4CD204473BE0067D7A9 /* Info.plist */,
+				7028C4CE204473BE0067D7A9 /* SensorTagNeckTrainer.entitlements */,
+			);
+			path = SensorTagNeckTrainer;
+			sourceTree = "<group>";
+		};
+		7028C4D6204473BE0067D7A9 /* SensorTagNeckTrainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7028C4D7204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift */,
+				7028C4D9204473BE0067D7A9 /* Info.plist */,
+			);
+			path = SensorTagNeckTrainerTests;
+			sourceTree = "<group>";
+		};
+		7028C4E1204473BE0067D7A9 /* SensorTagNeckTrainerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */,
+				7028C4E4204473BE0067D7A9 /* Info.plist */,
+			);
+			path = SensorTagNeckTrainerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7028C4C0204473BE0067D7A9 /* SensorTagNeckTrainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7028C4E7204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainer" */;
+			buildPhases = (
+				7028C4BD204473BE0067D7A9 /* Sources */,
+				7028C4BE204473BE0067D7A9 /* Frameworks */,
+				7028C4BF204473BE0067D7A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SensorTagNeckTrainer;
+			productName = SensorTagNeckTrainer;
+			productReference = 7028C4C1204473BE0067D7A9 /* SensorTagNeckTrainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7028C4D2204473BE0067D7A9 /* SensorTagNeckTrainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7028C4EA204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainerTests" */;
+			buildPhases = (
+				7028C4CF204473BE0067D7A9 /* Sources */,
+				7028C4D0204473BE0067D7A9 /* Frameworks */,
+				7028C4D1204473BE0067D7A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7028C4D5204473BE0067D7A9 /* PBXTargetDependency */,
+			);
+			name = SensorTagNeckTrainerTests;
+			productName = SensorTagNeckTrainerTests;
+			productReference = 7028C4D3204473BE0067D7A9 /* SensorTagNeckTrainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7028C4DD204473BE0067D7A9 /* SensorTagNeckTrainerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7028C4ED204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainerUITests" */;
+			buildPhases = (
+				7028C4DA204473BE0067D7A9 /* Sources */,
+				7028C4DB204473BE0067D7A9 /* Frameworks */,
+				7028C4DC204473BE0067D7A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7028C4E0204473BE0067D7A9 /* PBXTargetDependency */,
+			);
+			name = SensorTagNeckTrainerUITests;
+			productName = SensorTagNeckTrainerUITests;
+			productReference = 7028C4DE204473BE0067D7A9 /* SensorTagNeckTrainerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7028C4B9204473BE0067D7A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = lennartolsen.net;
+				TargetAttributes = {
+					7028C4C0204473BE0067D7A9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7028C4D2204473BE0067D7A9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7028C4C0204473BE0067D7A9;
+					};
+					7028C4DD204473BE0067D7A9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7028C4C0204473BE0067D7A9;
+					};
+				};
+			};
+			buildConfigurationList = 7028C4BC204473BE0067D7A9 /* Build configuration list for PBXProject "SensorTagNeckTrainer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7028C4B8204473BE0067D7A9;
+			productRefGroup = 7028C4C2204473BE0067D7A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7028C4C0204473BE0067D7A9 /* SensorTagNeckTrainer */,
+				7028C4D2204473BE0067D7A9 /* SensorTagNeckTrainerTests */,
+				7028C4DD204473BE0067D7A9 /* SensorTagNeckTrainerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7028C4BF204473BE0067D7A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7028C4C9204473BE0067D7A9 /* Assets.xcassets in Resources */,
+				7028C4CC204473BE0067D7A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7028C4D1204473BE0067D7A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7028C4DC204473BE0067D7A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7028C4BD204473BE0067D7A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7028C4C7204473BE0067D7A9 /* ViewController.swift in Sources */,
+				7028C4C5204473BE0067D7A9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7028C4CF204473BE0067D7A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7028C4D8204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7028C4DA204473BE0067D7A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7028C4E3204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7028C4D5204473BE0067D7A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7028C4C0204473BE0067D7A9 /* SensorTagNeckTrainer */;
+			targetProxy = 7028C4D4204473BE0067D7A9 /* PBXContainerItemProxy */;
+		};
+		7028C4E0204473BE0067D7A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7028C4C0204473BE0067D7A9 /* SensorTagNeckTrainer */;
+			targetProxy = 7028C4DF204473BE0067D7A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7028C4CA204473BE0067D7A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7028C4CB204473BE0067D7A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7028C4E5204473BE0067D7A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7028C4E6204473BE0067D7A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		7028C4E8204473BE0067D7A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SensorTagNeckTrainer/SensorTagNeckTrainer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X5EL62MCMB;
+				INFOPLIST_FILE = SensorTagNeckTrainer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.SensorTagNeckTrainer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		7028C4E9204473BE0067D7A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SensorTagNeckTrainer/SensorTagNeckTrainer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X5EL62MCMB;
+				INFOPLIST_FILE = SensorTagNeckTrainer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.SensorTagNeckTrainer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		7028C4EB204473BE0067D7A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X5EL62MCMB;
+				INFOPLIST_FILE = SensorTagNeckTrainerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.SensorTagNeckTrainerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensorTagNeckTrainer.app/Contents/MacOS/SensorTagNeckTrainer";
+			};
+			name = Debug;
+		};
+		7028C4EC204473BE0067D7A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X5EL62MCMB;
+				INFOPLIST_FILE = SensorTagNeckTrainerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.SensorTagNeckTrainerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensorTagNeckTrainer.app/Contents/MacOS/SensorTagNeckTrainer";
+			};
+			name = Release;
+		};
+		7028C4EE204473BE0067D7A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X5EL62MCMB;
+				INFOPLIST_FILE = SensorTagNeckTrainerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.SensorTagNeckTrainerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = SensorTagNeckTrainer;
+			};
+			name = Debug;
+		};
+		7028C4EF204473BE0067D7A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X5EL62MCMB;
+				INFOPLIST_FILE = SensorTagNeckTrainerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.lennartolsen.SensorTagNeckTrainerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = SensorTagNeckTrainer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7028C4BC204473BE0067D7A9 /* Build configuration list for PBXProject "SensorTagNeckTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7028C4E5204473BE0067D7A9 /* Debug */,
+				7028C4E6204473BE0067D7A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7028C4E7204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7028C4E8204473BE0067D7A9 /* Debug */,
+				7028C4E9204473BE0067D7A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7028C4EA204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7028C4EB204473BE0067D7A9 /* Debug */,
+				7028C4EC204473BE0067D7A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7028C4ED204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7028C4EE204473BE0067D7A9 /* Debug */,
+				7028C4EF204473BE0067D7A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7028C4B9204473BE0067D7A9 /* Project object */;
+}
