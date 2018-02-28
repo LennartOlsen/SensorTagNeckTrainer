@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,22 +674,22 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SensorTagNeckTrainer" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-303" y="-481"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="1280" height="720"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
@@ -698,20 +699,112 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="-26"/>
         </scene>
-        <!--View Controller-->
+        <!--Recorder Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="RecorderController" customModule="SensorTagNeckTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="678" height="448"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Em0-Yw-z76">
+                                <rect key="frame" x="18" y="389" width="590" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Dzl-Gc-q9R"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Waiting For Connection" id="M4E-VS-whz">
+                                    <font key="font" metaFont="system" size="32"/>
+                                    <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Suy-pZ-Nky">
+                                <rect key="frame" x="614" y="389" width="44" height="39"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="settings" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="rze-mQ-hgB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="doSettings:" target="XfG-lQ-9wD" id="AUc-Lr-c4L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Suy-pZ-Nky" firstAttribute="top" secondItem="Em0-Yw-z76" secondAttribute="top" id="6iM-aE-5xS"/>
+                            <constraint firstItem="Em0-Yw-z76" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Hnf-cT-L9s"/>
+                            <constraint firstAttribute="trailing" secondItem="Em0-Yw-z76" secondAttribute="trailing" constant="72" id="N6A-9g-4rI"/>
+                            <constraint firstAttribute="trailing" secondItem="Suy-pZ-Nky" secondAttribute="trailing" constant="20" symbolic="YES" id="PkR-M8-pD2"/>
+                            <constraint firstItem="Em0-Yw-z76" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="cOj-C4-kbs"/>
+                            <constraint firstItem="Suy-pZ-Nky" firstAttribute="bottom" secondItem="Em0-Yw-z76" secondAttribute="bottom" id="dLh-vQ-1wS"/>
+                            <constraint firstItem="Suy-pZ-Nky" firstAttribute="leading" secondItem="Em0-Yw-z76" secondAttribute="trailing" constant="8" symbolic="YES" id="nN1-R8-qFT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Em0-Yw-z76" id="eGU-nm-0du"/>
+                        <outlet property="settingsButton" destination="Suy-pZ-Nky" id="DUq-TT-4Sg"/>
+                        <segue destination="nmj-XE-2Tt" kind="sheet" identifier="ConnectControllerSegue" id="xDx-b7-ViJ"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-63" y="767"/>
+        </scene>
+        <!--Connect Controller-->
+        <scene sceneID="Vw1-gh-Fvv">
+            <objects>
+                <viewController id="nmj-XE-2Tt" customClass="ConnectController" customModule="SensorTagNeckTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="z2M-Lh-uKU">
+                        <rect key="frame" x="0.0" y="0.0" width="513" height="377"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7zJ-fa-gsB">
+                                <rect key="frame" x="18" y="318" width="477" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="5Vv-W5-VyB"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Searching For Device..." id="53c-VG-zW3">
+                                    <font key="font" metaFont="system" size="32"/>
+                                    <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-K8-lQi">
+                                <rect key="frame" x="182" y="116" width="150" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8Yn-3X-ang"/>
+                                    <constraint firstAttribute="height" constant="145" id="T5J-ie-E7Z"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="headphones" imagePosition="overlaps" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="CjJ-d1-TnV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <connections>
+                                        <action selector="doConnect:" target="nmj-XE-2Tt" id="JaU-d4-Xxo"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7zJ-fa-gsB" secondAttribute="trailing" constant="20" symbolic="YES" id="Gre-sP-tQQ"/>
+                            <constraint firstItem="EXW-K8-lQi" firstAttribute="centerY" secondItem="z2M-Lh-uKU" secondAttribute="centerY" id="Pbs-Ud-d6h"/>
+                            <constraint firstItem="EXW-K8-lQi" firstAttribute="centerX" secondItem="7zJ-fa-gsB" secondAttribute="centerX" id="eFr-MG-ZNr"/>
+                            <constraint firstItem="7zJ-fa-gsB" firstAttribute="leading" secondItem="z2M-Lh-uKU" secondAttribute="leading" constant="20" symbolic="YES" id="hmH-q0-bnE"/>
+                            <constraint firstItem="7zJ-fa-gsB" firstAttribute="top" secondItem="z2M-Lh-uKU" secondAttribute="top" constant="20" symbolic="YES" id="lGc-3D-QXJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="EXW-K8-lQi" id="GcB-QG-y8L"/>
+                        <outlet property="infoLabel" destination="7zJ-fa-gsB" id="9ML-M5-iqD"/>
+                    </connections>
+                </viewController>
+                <customObject id="iou-kl-gvN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="587.5" y="731.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="headphones" width="372.3636474609375" height="372.3636474609375"/>
+        <image name="settings" width="384" height="384"/>
+    </resources>
 </document>
