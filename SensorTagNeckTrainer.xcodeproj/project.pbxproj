@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1120091472618752DC7362D8 /* Pods_SensorTagNeckTrainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1647669116BC42FE43832FFD /* Pods_SensorTagNeckTrainer.framework */; };
 		7028C4C5204473BE0067D7A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4C4204473BE0067D7A9 /* AppDelegate.swift */; };
 		7028C4C7204473BE0067D7A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4C6204473BE0067D7A9 /* ViewController.swift */; };
 		7028C4C9204473BE0067D7A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7028C4C8204473BE0067D7A9 /* Assets.xcassets */; };
@@ -14,7 +15,7 @@
 		7028C4D8204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4D7204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift */; };
 		7028C4E3204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */; };
 		7028C4F5204474650067D7A9 /* timeFramedActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F4204474650067D7A9 /* timeFramedActivityClassifier.mlmodel */; };
-		7028C508204474AA0067D7A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F8204474A90067D7A9 /* Constants.swift */; };
+		7028C508204474AA0067D7A9 /* SensorTagConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F8204474A90067D7A9 /* SensorTagConstants.swift */; };
 		7028C509204474AA0067D7A9 /* SensorTagDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F9204474A90067D7A9 /* SensorTagDelegate.swift */; };
 		7028C50A204474AA0067D7A9 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4FA204474A90067D7A9 /* Controller.swift */; };
 		7028C50B204474AA0067D7A9 /* SensorTagPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4FB204474A90067D7A9 /* SensorTagPeripheral.swift */; };
@@ -29,6 +30,36 @@
 		7028C51A20447A0A0067D7A9 /* ConnectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C51920447A0A0067D7A9 /* ConnectController.swift */; };
 		7028C51F204534A00067D7A9 /* RecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C51D204534A00067D7A9 /* RecorderController.swift */; };
 		7028C524204535900067D7A9 /* OwningViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C523204535900067D7A9 /* OwningViewControllerDelegate.swift */; };
+		7030415E2065772200DC3DB3 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030415D2065772200DC3DB3 /* LocalRepository.swift */; };
+		703A1B0A2056DF9A000DBB0A /* SDUConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A1B092056DF9A000DBB0A /* SDUConstants.swift */; };
+		703A1B0C2056E30E000DBB0A /* SDUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A1B0B2056E30E000DBB0A /* SDUPeripheral.swift */; };
+		7049379720496EC700A9BF4B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7049379620496EC700A9BF4B /* MainController.swift */; };
+		7049379C20496F5500A9BF4B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7049379B20496F5500A9BF4B /* Colors.swift */; };
+		7049379E2049796C00A9BF4B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7049379D2049796C00A9BF4B /* Fonts.swift */; };
+		704A87B8205BEAE1004443FB /* Baseliner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87B7205BEAE1004443FB /* Baseliner.swift */; };
+		704A87BA205BEB3F004443FB /* Baseline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87B9205BEB3F004443FB /* Baseline.swift */; };
+		704A87BF205C03D1004443FB /* ObserverPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87BE205C03D1004443FB /* ObserverPattern.swift */; };
+		704A87C1205C0452004443FB /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87C0205C0452004443FB /* ObserverProtocol.swift */; };
+		704A87C4205C0543004443FB /* BaseBluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87C3205C0543004443FB /* BaseBluetoothPeripheral.swift */; };
+		706B27D020480B7100E94EEE /* ObserverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B27CF20480B7100E94EEE /* ObserverController.swift */; };
+		709B4BB8206478C600633CA9 /* bendForward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAB206478C400633CA9 /* bendForward.mp3 */; };
+		709B4BB9206478C600633CA9 /* lookToTheRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAC206478C400633CA9 /* lookToTheRight.mp3 */; };
+		709B4BBA206478C600633CA9 /* resumeNeutral.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAD206478C500633CA9 /* resumeNeutral.mp3 */; };
+		709B4BBB206478C600633CA9 /* adjustToYourNeckToANeutralPosition.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAE206478C500633CA9 /* adjustToYourNeckToANeutralPosition.mp3 */; };
+		709B4BBC206478C600633CA9 /* tiltLeft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAF206478C500633CA9 /* tiltLeft.mp3 */; };
+		709B4BBD206478C600633CA9 /* assumeYourNeutralPosition.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB0206478C500633CA9 /* assumeYourNeutralPosition.mp3 */; };
+		709B4BBE206478C600633CA9 /* lookLeft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB1206478C500633CA9 /* lookLeft.mp3 */; };
+		709B4BBF206478C600633CA9 /* lookToTheLeft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB2206478C600633CA9 /* lookToTheLeft.mp3 */; };
+		709B4BC0206478C600633CA9 /* lookForward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB3206478C600633CA9 /* lookForward.mp3 */; };
+		709B4BC1206478C600633CA9 /* tiltYourHeadBack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB4206478C600633CA9 /* tiltYourHeadBack.mp3 */; };
+		709B4BC2206478C600633CA9 /* hunchForward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB5206478C600633CA9 /* hunchForward.mp3 */; };
+		709B4BC3206478C600633CA9 /* bendYourNeckBackward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB6206478C600633CA9 /* bendYourNeckBackward.mp3 */; };
+		709B4BC4206478C600633CA9 /* tiltRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BB7206478C600633CA9 /* tiltRight.mp3 */; };
+		709B4BC6206478F900633CA9 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B4BC5206478F900633CA9 /* SoundPlayer.swift */; };
+		70C3AFAE20690DAD0021EF3B /* BaselineComparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3AFAD20690DAD0021EF3B /* BaselineComparator.swift */; };
+		70C3AFB020691A8B0021EF3B /* BaselineComparatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3AFAF20691A8B0021EF3B /* BaselineComparatorDelegate.swift */; };
+		70CF8F3F205FD79C00718BDC /* BaselinerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F3E205FD79C00718BDC /* BaselinerDelegate.swift */; };
+		70CF8F4420601CF000718BDC /* BaselineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF8F4320601CF000718BDC /* BaselineController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1647669116BC42FE43832FFD /* Pods_SensorTagNeckTrainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SensorTagNeckTrainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D1A03B59BD86BC90192D5B /* Pods-SensorTagNeckTrainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTagNeckTrainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTagNeckTrainer/Pods-SensorTagNeckTrainer.release.xcconfig"; sourceTree = "<group>"; };
 		7028C4C1204473BE0067D7A9 /* SensorTagNeckTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorTagNeckTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7028C4C4204473BE0067D7A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7028C4C6204473BE0067D7A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +96,7 @@
 		7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTagNeckTrainerUITests.swift; sourceTree = "<group>"; };
 		7028C4E4204473BE0067D7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7028C4F4204474650067D7A9 /* timeFramedActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = timeFramedActivityClassifier.mlmodel; path = ../../../../SensorTagRaiderDataSet/jupyter/timeFramedActivityClassifier.mlmodel; sourceTree = "<group>"; };
-		7028C4F8204474A90067D7A9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7028C4F8204474A90067D7A9 /* SensorTagConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTagConstants.swift; sourceTree = "<group>"; };
 		7028C4F9204474A90067D7A9 /* SensorTagDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTagDelegate.swift; sourceTree = "<group>"; };
 		7028C4FA204474A90067D7A9 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		7028C4FB204474A90067D7A9 /* SensorTagPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTagPeripheral.swift; sourceTree = "<group>"; };
@@ -78,6 +111,37 @@
 		7028C51920447A0A0067D7A9 /* ConnectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectController.swift; sourceTree = "<group>"; };
 		7028C51D204534A00067D7A9 /* RecorderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderController.swift; sourceTree = "<group>"; };
 		7028C523204535900067D7A9 /* OwningViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwningViewControllerDelegate.swift; sourceTree = "<group>"; };
+		7030415D2065772200DC3DB3 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
+		703A1B092056DF9A000DBB0A /* SDUConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUConstants.swift; sourceTree = "<group>"; };
+		703A1B0B2056E30E000DBB0A /* SDUPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUPeripheral.swift; sourceTree = "<group>"; };
+		7049379620496EC700A9BF4B /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		7049379B20496F5500A9BF4B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7049379D2049796C00A9BF4B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		704A87B7205BEAE1004443FB /* Baseliner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baseliner.swift; sourceTree = "<group>"; };
+		704A87B9205BEB3F004443FB /* Baseline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baseline.swift; sourceTree = "<group>"; };
+		704A87BE205C03D1004443FB /* ObserverPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverPattern.swift; sourceTree = "<group>"; };
+		704A87C0205C0452004443FB /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
+		704A87C3205C0543004443FB /* BaseBluetoothPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBluetoothPeripheral.swift; sourceTree = "<group>"; };
+		706B27CF20480B7100E94EEE /* ObserverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverController.swift; sourceTree = "<group>"; };
+		709B4BAB206478C400633CA9 /* bendForward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bendForward.mp3; sourceTree = "<group>"; };
+		709B4BAC206478C400633CA9 /* lookToTheRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lookToTheRight.mp3; sourceTree = "<group>"; };
+		709B4BAD206478C500633CA9 /* resumeNeutral.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = resumeNeutral.mp3; sourceTree = "<group>"; };
+		709B4BAE206478C500633CA9 /* adjustToYourNeckToANeutralPosition.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adjustToYourNeckToANeutralPosition.mp3; sourceTree = "<group>"; };
+		709B4BAF206478C500633CA9 /* tiltLeft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tiltLeft.mp3; sourceTree = "<group>"; };
+		709B4BB0206478C500633CA9 /* assumeYourNeutralPosition.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = assumeYourNeutralPosition.mp3; sourceTree = "<group>"; };
+		709B4BB1206478C500633CA9 /* lookLeft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lookLeft.mp3; sourceTree = "<group>"; };
+		709B4BB2206478C600633CA9 /* lookToTheLeft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lookToTheLeft.mp3; sourceTree = "<group>"; };
+		709B4BB3206478C600633CA9 /* lookForward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lookForward.mp3; sourceTree = "<group>"; };
+		709B4BB4206478C600633CA9 /* tiltYourHeadBack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tiltYourHeadBack.mp3; sourceTree = "<group>"; };
+		709B4BB5206478C600633CA9 /* hunchForward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hunchForward.mp3; sourceTree = "<group>"; };
+		709B4BB6206478C600633CA9 /* bendYourNeckBackward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bendYourNeckBackward.mp3; sourceTree = "<group>"; };
+		709B4BB7206478C600633CA9 /* tiltRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tiltRight.mp3; sourceTree = "<group>"; };
+		709B4BC5206478F900633CA9 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		70C3AFAD20690DAD0021EF3B /* BaselineComparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineComparator.swift; sourceTree = "<group>"; };
+		70C3AFAF20691A8B0021EF3B /* BaselineComparatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineComparatorDelegate.swift; sourceTree = "<group>"; };
+		70CF8F3E205FD79C00718BDC /* BaselinerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselinerDelegate.swift; sourceTree = "<group>"; };
+		70CF8F4320601CF000718BDC /* BaselineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineController.swift; sourceTree = "<group>"; };
+		E968430F8173F9A3DDA26D09 /* Pods-SensorTagNeckTrainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTagNeckTrainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTagNeckTrainer/Pods-SensorTagNeckTrainer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1120091472618752DC7362D8 /* Pods_SensorTagNeckTrainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +177,8 @@
 				7028C4D6204473BE0067D7A9 /* SensorTagNeckTrainerTests */,
 				7028C4E1204473BE0067D7A9 /* SensorTagNeckTrainerUITests */,
 				7028C4C2204473BE0067D7A9 /* Products */,
+				F16DB7CBEB35779C7CF7C57C /* Pods */,
+				A79325D74FB97B40C6877A45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +195,10 @@
 		7028C4C3204473BE0067D7A9 /* SensorTagNeckTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				7030415B2065770500DC3DB3 /* Repositories */,
+				709B4BAA206478B500633CA9 /* Sounds */,
+				704A87BC205C03B4004443FB /* Pattern */,
+				7049379920496F3100A9BF4B /* Constants */,
 				7028C51B20447A100067D7A9 /* Views */,
 				7028C4F6204474A90067D7A9 /* Bluetooth */,
 				7028C4FF204474A90067D7A9 /* Controllers */,
@@ -172,6 +243,8 @@
 		7028C4F6204474A90067D7A9 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				704A87C2205C0526004443FB /* Base */,
+				703A1B082056DF87000DBB0A /* SDU */,
 				7028C4F7204474A90067D7A9 /* CC2541 */,
 				7028C4FC204474A90067D7A9 /* PeripheralManager.swift */,
 				7028C4FD204474A90067D7A9 /* BluetoothListenerDelegate.swift */,
@@ -183,7 +256,7 @@
 		7028C4F7204474A90067D7A9 /* CC2541 */ = {
 			isa = PBXGroup;
 			children = (
-				7028C4F8204474A90067D7A9 /* Constants.swift */,
+				7028C4F8204474A90067D7A9 /* SensorTagConstants.swift */,
 				7028C4F9204474A90067D7A9 /* SensorTagDelegate.swift */,
 				7028C4FA204474A90067D7A9 /* Controller.swift */,
 				7028C4FB204474A90067D7A9 /* SensorTagPeripheral.swift */,
@@ -194,6 +267,8 @@
 		7028C4FF204474A90067D7A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				709B4BC72064790F00633CA9 /* SoundPlayer */,
+				704A87B6205BEACA004443FB /* Baseliner */,
 				7028C500204474A90067D7A9 /* Collector */,
 				7028C503204474A90067D7A9 /* Predictor */,
 			);
@@ -222,6 +297,7 @@
 			children = (
 				7028C506204474AA0067D7A9 /* Measurement.swift */,
 				7028C507204474AA0067D7A9 /* DataEntry.swift */,
+				704A87B9205BEB3F004443FB /* Baseline.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +305,9 @@
 		7028C51B20447A100067D7A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70CF8F4020601C8A00718BDC /* Baseline */,
+				7049379820496ED400A9BF4B /* Main */,
+				706B27CE20480B5000E94EEE /* Observer */,
 				7028C522204535360067D7A9 /* Delegates */,
 				7028C521204534B40067D7A9 /* Recorder */,
 				7028C51C20447A190067D7A9 /* Connect */,
@@ -260,6 +339,153 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		7030415B2065770500DC3DB3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7030415C2065770E00DC3DB3 /* Local */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7030415C2065770E00DC3DB3 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				7030415D2065772200DC3DB3 /* LocalRepository.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		703A1B082056DF87000DBB0A /* SDU */ = {
+			isa = PBXGroup;
+			children = (
+				703A1B092056DF9A000DBB0A /* SDUConstants.swift */,
+				703A1B0B2056E30E000DBB0A /* SDUPeripheral.swift */,
+			);
+			path = SDU;
+			sourceTree = "<group>";
+		};
+		7049379820496ED400A9BF4B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7049379620496EC700A9BF4B /* MainController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7049379920496F3100A9BF4B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7049379B20496F5500A9BF4B /* Colors.swift */,
+				7049379D2049796C00A9BF4B /* Fonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		704A87B6205BEACA004443FB /* Baseliner */ = {
+			isa = PBXGroup;
+			children = (
+				70C3AFAB206902C00021EF3B /* Comparator */,
+				704A87B7205BEAE1004443FB /* Baseliner.swift */,
+				70CF8F3E205FD79C00718BDC /* BaselinerDelegate.swift */,
+			);
+			path = Baseliner;
+			sourceTree = "<group>";
+		};
+		704A87BC205C03B4004443FB /* Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				704A87BD205C03C1004443FB /* Oberserver */,
+			);
+			path = Pattern;
+			sourceTree = "<group>";
+		};
+		704A87BD205C03C1004443FB /* Oberserver */ = {
+			isa = PBXGroup;
+			children = (
+				704A87BE205C03D1004443FB /* ObserverPattern.swift */,
+				704A87C0205C0452004443FB /* ObserverProtocol.swift */,
+			);
+			path = Oberserver;
+			sourceTree = "<group>";
+		};
+		704A87C2205C0526004443FB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				704A87C3205C0543004443FB /* BaseBluetoothPeripheral.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		706B27CE20480B5000E94EEE /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				706B27CF20480B7100E94EEE /* ObserverController.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
+		709B4BAA206478B500633CA9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				709B4BAE206478C500633CA9 /* adjustToYourNeckToANeutralPosition.mp3 */,
+				709B4BB0206478C500633CA9 /* assumeYourNeutralPosition.mp3 */,
+				709B4BAB206478C400633CA9 /* bendForward.mp3 */,
+				709B4BB6206478C600633CA9 /* bendYourNeckBackward.mp3 */,
+				709B4BB5206478C600633CA9 /* hunchForward.mp3 */,
+				709B4BB3206478C600633CA9 /* lookForward.mp3 */,
+				709B4BB1206478C500633CA9 /* lookLeft.mp3 */,
+				709B4BB2206478C600633CA9 /* lookToTheLeft.mp3 */,
+				709B4BAC206478C400633CA9 /* lookToTheRight.mp3 */,
+				709B4BAD206478C500633CA9 /* resumeNeutral.mp3 */,
+				709B4BAF206478C500633CA9 /* tiltLeft.mp3 */,
+				709B4BB7206478C600633CA9 /* tiltRight.mp3 */,
+				709B4BB4206478C600633CA9 /* tiltYourHeadBack.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		709B4BC72064790F00633CA9 /* SoundPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				709B4BC5206478F900633CA9 /* SoundPlayer.swift */,
+			);
+			path = SoundPlayer;
+			sourceTree = "<group>";
+		};
+		70C3AFAB206902C00021EF3B /* Comparator */ = {
+			isa = PBXGroup;
+			children = (
+				70C3AFAD20690DAD0021EF3B /* BaselineComparator.swift */,
+				70C3AFAF20691A8B0021EF3B /* BaselineComparatorDelegate.swift */,
+			);
+			path = Comparator;
+			sourceTree = "<group>";
+		};
+		70CF8F4020601C8A00718BDC /* Baseline */ = {
+			isa = PBXGroup;
+			children = (
+				70CF8F4320601CF000718BDC /* BaselineController.swift */,
+			);
+			path = Baseline;
+			sourceTree = "<group>";
+		};
+		A79325D74FB97B40C6877A45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1647669116BC42FE43832FFD /* Pods_SensorTagNeckTrainer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F16DB7CBEB35779C7CF7C57C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E968430F8173F9A3DDA26D09 /* Pods-SensorTagNeckTrainer.debug.xcconfig */,
+				36D1A03B59BD86BC90192D5B /* Pods-SensorTagNeckTrainer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,9 +493,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7028C4E7204473BE0067D7A9 /* Build configuration list for PBXNativeTarget "SensorTagNeckTrainer" */;
 			buildPhases = (
+				A74E21B76E44DDA92A18B967 /* [CP] Check Pods Manifest.lock */,
 				7028C4BD204473BE0067D7A9 /* Sources */,
 				7028C4BE204473BE0067D7A9 /* Frameworks */,
 				7028C4BF204473BE0067D7A9 /* Resources */,
+				C09CFBC8048C137681AB97EF /* [CP] Embed Pods Frameworks */,
+				45CC76DA8AEB5E44A4529CB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,8 +596,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709B4BBE206478C600633CA9 /* lookLeft.mp3 in Resources */,
+				709B4BBD206478C600633CA9 /* assumeYourNeutralPosition.mp3 in Resources */,
+				709B4BBA206478C600633CA9 /* resumeNeutral.mp3 in Resources */,
+				709B4BC0206478C600633CA9 /* lookForward.mp3 in Resources */,
+				709B4BC2206478C600633CA9 /* hunchForward.mp3 in Resources */,
+				709B4BBF206478C600633CA9 /* lookToTheLeft.mp3 in Resources */,
+				709B4BC4206478C600633CA9 /* tiltRight.mp3 in Resources */,
+				709B4BC1206478C600633CA9 /* tiltYourHeadBack.mp3 in Resources */,
 				7028C4C9204473BE0067D7A9 /* Assets.xcassets in Resources */,
+				709B4BC3206478C600633CA9 /* bendYourNeckBackward.mp3 in Resources */,
+				709B4BB8206478C600633CA9 /* bendForward.mp3 in Resources */,
+				709B4BBC206478C600633CA9 /* tiltLeft.mp3 in Resources */,
 				7028C4CC204473BE0067D7A9 /* Main.storyboard in Resources */,
+				709B4BBB206478C600633CA9 /* adjustToYourNeckToANeutralPosition.mp3 in Resources */,
+				709B4BB9206478C600633CA9 /* lookToTheRight.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,27 +630,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45CC76DA8AEB5E44A4529CB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SensorTagNeckTrainer/Pods-SensorTagNeckTrainer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A74E21B76E44DDA92A18B967 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SensorTagNeckTrainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C09CFBC8048C137681AB97EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SensorTagNeckTrainer/Pods-SensorTagNeckTrainer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SensorTagNeckTrainer/Pods-SensorTagNeckTrainer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7028C4BD204473BE0067D7A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70CF8F4420601CF000718BDC /* BaselineController.swift in Sources */,
 				7028C4C7204473BE0067D7A9 /* ViewController.swift in Sources */,
 				7028C50C204474AA0067D7A9 /* PeripheralManager.swift in Sources */,
+				706B27D020480B7100E94EEE /* ObserverController.swift in Sources */,
 				7028C4F5204474650067D7A9 /* timeFramedActivityClassifier.mlmodel in Sources */,
+				7049379720496EC700A9BF4B /* MainController.swift in Sources */,
 				7028C524204535900067D7A9 /* OwningViewControllerDelegate.swift in Sources */,
+				704A87C4205C0543004443FB /* BaseBluetoothPeripheral.swift in Sources */,
+				703A1B0C2056E30E000DBB0A /* SDUPeripheral.swift in Sources */,
+				703A1B0A2056DF9A000DBB0A /* SDUConstants.swift in Sources */,
 				7028C4C5204473BE0067D7A9 /* AppDelegate.swift in Sources */,
 				7028C50B204474AA0067D7A9 /* SensorTagPeripheral.swift in Sources */,
+				7049379E2049796C00A9BF4B /* Fonts.swift in Sources */,
+				7030415E2065772200DC3DB3 /* LocalRepository.swift in Sources */,
 				7028C50D204474AA0067D7A9 /* BluetoothListenerDelegate.swift in Sources */,
+				704A87BA205BEB3F004443FB /* Baseline.swift in Sources */,
 				7028C513204474AA0067D7A9 /* DataEntry.swift in Sources */,
+				704A87B8205BEAE1004443FB /* Baseliner.swift in Sources */,
+				70C3AFB020691A8B0021EF3B /* BaselineComparatorDelegate.swift in Sources */,
+				704A87C1205C0452004443FB /* ObserverProtocol.swift in Sources */,
+				7049379C20496F5500A9BF4B /* Colors.swift in Sources */,
+				70C3AFAE20690DAD0021EF3B /* BaselineComparator.swift in Sources */,
 				7028C51A20447A0A0067D7A9 /* ConnectController.swift in Sources */,
 				7028C512204474AA0067D7A9 /* Measurement.swift in Sources */,
 				7028C510204474AA0067D7A9 /* CollectorListenerDelegate.swift in Sources */,
 				7028C50A204474AA0067D7A9 /* Controller.swift in Sources */,
 				7028C511204474AA0067D7A9 /* Predictor.swift in Sources */,
-				7028C508204474AA0067D7A9 /* Constants.swift in Sources */,
+				7028C508204474AA0067D7A9 /* SensorTagConstants.swift in Sources */,
 				7028C50E204474AA0067D7A9 /* PeripheralListenerDelegate.swift in Sources */,
+				709B4BC6206478F900633CA9 /* SoundPlayer.swift in Sources */,
 				7028C50F204474AA0067D7A9 /* Collector.swift in Sources */,
+				70CF8F3F205FD79C00718BDC /* BaselinerDelegate.swift in Sources */,
+				704A87BF205C03D1004443FB /* ObserverPattern.swift in Sources */,
 				7028C509204474AA0067D7A9 /* SensorTagDelegate.swift in Sources */,
 				7028C51F204534A00067D7A9 /* RecorderController.swift in Sources */,
 			);
@@ -565,6 +878,7 @@
 		};
 		7028C4E8204473BE0067D7A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E968430F8173F9A3DDA26D09 /* Pods-SensorTagNeckTrainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SensorTagNeckTrainer/SensorTagNeckTrainer.entitlements;
@@ -581,6 +895,7 @@
 		};
 		7028C4E9204473BE0067D7A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36D1A03B59BD86BC90192D5B /* Pods-SensorTagNeckTrainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SensorTagNeckTrainer/SensorTagNeckTrainer.entitlements;

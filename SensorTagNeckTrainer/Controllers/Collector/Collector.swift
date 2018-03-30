@@ -26,7 +26,7 @@ class Collector {
         self.device = device
         listenerDelegate = delegate
         
-        device.sensorTagDelegate = self
+        device.attach(observer: self)
     }
     
     func doCollect(time : Double, type : DataEntryTypes){
@@ -52,7 +52,7 @@ class Collector {
     }
     
     func startMeasurementCollection(){
-        let queue = DispatchQueue(label : "net.lennartolsen.SensorTagCollector")
+        let queue = DispatchQueue(label : "net.lennartolsen.SensorTagCollector.Collector")
         
         timer = DispatchSource.makeTimerSource(queue: queue)
         timer!.schedule(deadline: .now() + .milliseconds(333), repeating: .milliseconds(333))
@@ -78,6 +78,12 @@ class Collector {
 }
 
 extension Collector : SensorTagDelegate {
+    var id: String {
+        get {
+            return "Collector"
+        }
+    }
+    
     
     func Accelerometer(measurement: AccelerometerMeasurement) {
         accelerometer = measurement

@@ -14,7 +14,6 @@ class Predictor {
     struct ModelConstants {
         static let numOfFeatures = 9
         static let predictionWindowSize = 4
-        static let sensorsUpdateInterval = 1.0 / 4.0
         static let hiddenInLength = 200
         static let hiddenCellInLength = 200
     }
@@ -58,7 +57,6 @@ class Predictor {
        guard let prediction = try? activityClassificationModel.prediction(features: dataArray,
                                                                           hiddenIn: lastHiddenOutput,
                                                                           cellIn: lastHiddenCellOutput) else {
-                                                                            print("Fatalus")
                                                                             return "N/A"
         }
         

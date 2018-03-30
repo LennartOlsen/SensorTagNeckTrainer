@@ -11,7 +11,7 @@ import CoreBluetooth
 
 protocol BluetoothListenerDelegate {
     
-    /** When  discovering One new device **/
+    /** When discovering One new device **/
     func didDiscover(peripheralDevice : CBPeripheral)
     
     func didConnect(peripheralDevice : CBPeripheral)

@@ -29,8 +29,8 @@ enum DataEntryTypes : String {
     
     case neutral = "neutral" /** Special Case has no reversible **/
     
-    static let allReversible = [tiltLeft, tiltRight, rotateLeft, rotateRight, bendForward, bendBackward, hunchForward,neutral]
-    static let allBacks = [tiltLeftBack, tiltRightBack, rotateLeftBack, rotateRightBack, bendForwardBack, bendBackwardBack, hunchForwardBack,neutral]
+    static let allReversible = [tiltLeft, tiltRight, rotateLeft, rotateRight, bendForward, bendBackward, hunchForward, neutral]
+    static let allBacks = [tiltLeftBack, tiltRightBack, rotateLeftBack, rotateRightBack, bendForwardBack, bendBackwardBack, hunchForwardBack, neutral]
     
     static func getNext(dataEntry : DataEntryTypes) -> DataEntryTypes {
         if let i = allReversible.index(of: dataEntry)  {
@@ -39,6 +39,15 @@ enum DataEntryTypes : String {
             return allReversible[i]
         }
         
+        return .tiltLeft
+    }
+    
+    static func getNextReversible(dataEntry : DataEntryTypes) -> DataEntryTypes{
+        if let i = allReversible.index(of : dataEntry) {
+            if i + 1 < allReversible.count - 1 {
+                return allReversible[i+1]
+            }
+        }
         return .tiltLeft
     }
 }

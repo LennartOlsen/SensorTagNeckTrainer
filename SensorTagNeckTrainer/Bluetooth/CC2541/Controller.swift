@@ -81,6 +81,24 @@ class Controller {
         return measurement
     }
     
+    func getAccelerometerAndGyroscopeData(value: NSData) -> (AccelerometerMeasurement, GyroscopeMeasurement) {
+        let dataFromSensor = dataToUnsignedBytes16(value: value)
+        let xAccel = Double(dataFromSensor[1]) / 65536
+        let yAccel = Double(dataFromSensor[2]) / 65536
+        let zAccel = Double(dataFromSensor[3]) / 65536
+        
+        let accelerometerMeasurement = AccelerometerMeasurement(xAccel, yAccel, zAccel)
+        
+        let xGyro = Double(dataFromSensor[4]) * 500 / 65536 * -1
+        let yGyro = Double(dataFromSensor[5]) * 500 / 65536
+        let zGyro = Double(dataFromSensor[6]) * 500 / 65536
+        
+        let gyroscopeMeasurement = GyroscopeMeasurement(xGyro, yGyro, zGyro)
+        
+        return (accelerometerMeasurement, gyroscopeMeasurement)
+        
+    }
+    
     func setCalibration(accelValue : [Double], magnetoValue : [Double], gyroValue : [Double]){
         xAccelerationCalibarationValue  = accelValue[0] * -1
         yAccelerationCalibarationValue  = accelValue[1] * -1

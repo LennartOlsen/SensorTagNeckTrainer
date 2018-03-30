@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -683,8 +684,8 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                <windowController id="B8D-0N-5wS" customClass="MainController" customModule="SensorTagNeckTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="1280" height="720"/>
@@ -694,6 +695,7 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="Window" destination="IQv-IB-iLA" id="fme-mh-msx"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
@@ -706,11 +708,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="RecorderController" customModule="SensorTagNeckTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="678" height="448"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="755"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Em0-Yw-z76">
-                                <rect key="frame" x="18" y="389" width="590" height="39"/>
+                                <rect key="frame" x="18" y="696" width="1192" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Dzl-Gc-q9R"/>
                                 </constraints>
@@ -721,7 +723,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Suy-pZ-Nky">
-                                <rect key="frame" x="614" y="389" width="44" height="39"/>
+                                <rect key="frame" x="1216" y="696" width="44" height="39"/>
                                 <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="settings" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="rze-mQ-hgB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -730,26 +732,91 @@
                                     <action selector="doSettings:" target="XfG-lQ-9wD" id="AUc-Lr-c4L"/>
                                 </connections>
                             </button>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Civ-Bl-atf">
+                                <rect key="frame" x="20" y="685" width="1240" height="5"/>
+                            </box>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="io4-OJ-QmR">
+                                <rect key="frame" x="20" y="72" width="1240" height="616"/>
+                                <subviews>
+                                    <customView identifier="AccelerometerView" translatesAutoresizingMaskIntoConstraints="NO" id="LT3-kA-Xrh" customClass="ObserverController" customModule="SensorTagNeckTrainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="416" width="1240" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="8aC-4P-DlY"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView identifier="AccelerometerView" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-5P-TUJ" customClass="ObserverController" customModule="SensorTagNeckTrainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="1240" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="T7h-Ye-fZH"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView identifier="AccelerometerView" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-VD-mBP" customClass="ObserverController" customModule="SensorTagNeckTrainer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="1240" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="OZD-hp-dT4"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UwE-VD-mBP" firstAttribute="top" secondItem="io4-OJ-QmR" secondAttribute="top" constant="416" id="Nvr-oX-fM8"/>
+                                    <constraint firstItem="LzW-5P-TUJ" firstAttribute="top" secondItem="LT3-kA-Xrh" secondAttribute="bottom" constant="8" id="RRV-N6-Rha"/>
+                                    <constraint firstItem="LzW-5P-TUJ" firstAttribute="top" secondItem="io4-OJ-QmR" secondAttribute="top" constant="208" id="WSA-8Y-Nsv"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11Y-3e-QSP">
+                                <rect key="frame" x="14" y="24" width="150" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Establish Baseline" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qqc-5x-yic">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="doBaseline:" target="XfG-lQ-9wD" id="Esk-zR-OI4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="io4-OJ-QmR" firstAttribute="top" secondItem="Civ-Bl-atf" secondAttribute="top" id="0dv-ds-1Yr"/>
+                            <constraint firstItem="Civ-Bl-atf" firstAttribute="leading" secondItem="Em0-Yw-z76" secondAttribute="leading" id="36p-HU-2zP"/>
                             <constraint firstItem="Suy-pZ-Nky" firstAttribute="top" secondItem="Em0-Yw-z76" secondAttribute="top" id="6iM-aE-5xS"/>
+                            <constraint firstItem="io4-OJ-QmR" firstAttribute="trailing" secondItem="Civ-Bl-atf" secondAttribute="trailing" id="7g0-KY-2XQ"/>
+                            <constraint firstAttribute="bottom" secondItem="io4-OJ-QmR" secondAttribute="bottom" constant="72" id="Gyc-88-FS3"/>
                             <constraint firstItem="Em0-Yw-z76" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Hnf-cT-L9s"/>
                             <constraint firstAttribute="trailing" secondItem="Em0-Yw-z76" secondAttribute="trailing" constant="72" id="N6A-9g-4rI"/>
+                            <constraint firstItem="Civ-Bl-atf" firstAttribute="trailing" secondItem="Suy-pZ-Nky" secondAttribute="trailing" id="Nqb-DK-nwX"/>
                             <constraint firstAttribute="trailing" secondItem="Suy-pZ-Nky" secondAttribute="trailing" constant="20" symbolic="YES" id="PkR-M8-pD2"/>
+                            <constraint firstItem="io4-OJ-QmR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="67" id="TKw-q0-O9C"/>
+                            <constraint firstItem="Civ-Bl-atf" firstAttribute="top" secondItem="Em0-Yw-z76" secondAttribute="bottom" constant="8" symbolic="YES" id="bbS-0d-bBQ"/>
                             <constraint firstItem="Em0-Yw-z76" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="cOj-C4-kbs"/>
                             <constraint firstItem="Suy-pZ-Nky" firstAttribute="bottom" secondItem="Em0-Yw-z76" secondAttribute="bottom" id="dLh-vQ-1wS"/>
+                            <constraint firstItem="io4-OJ-QmR" firstAttribute="leading" secondItem="Civ-Bl-atf" secondAttribute="leading" id="gEa-Ji-MVm"/>
                             <constraint firstItem="Suy-pZ-Nky" firstAttribute="leading" secondItem="Em0-Yw-z76" secondAttribute="trailing" constant="8" symbolic="YES" id="nN1-R8-qFT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accelerometerController" destination="LT3-kA-Xrh" id="936-0n-WHu"/>
+                        <outlet property="baselineButton" destination="11Y-3e-QSP" id="bd3-uR-aRj"/>
+                        <outlet property="gyroscopeController" destination="UwE-VD-mBP" id="Bl1-yb-Zp4"/>
                         <outlet property="infoLabel" destination="Em0-Yw-z76" id="eGU-nm-0du"/>
+                        <outlet property="magnetometerController" destination="LzW-5P-TUJ" id="c9u-qS-20F"/>
                         <outlet property="settingsButton" destination="Suy-pZ-Nky" id="DUq-TT-4Sg"/>
                         <segue destination="nmj-XE-2Tt" kind="sheet" identifier="ConnectControllerSegue" id="xDx-b7-ViJ"/>
+                        <segue destination="AFs-YN-Uz2" kind="modal" identifier="BaselineControllerSegue" id="4Tr-li-f9l"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="767"/>
+            <point key="canvasLocation" x="-141" y="864.5"/>
         </scene>
         <!--Connect Controller-->
         <scene sceneID="Vw1-gh-Fvv">
@@ -800,7 +867,107 @@
                 </viewController>
                 <customObject id="iou-kl-gvN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587.5" y="731.5"/>
+            <point key="canvasLocation" x="-525" y="1592"/>
+        </scene>
+        <!--Baseline Controller-->
+        <scene sceneID="PqQ-g0-gIi">
+            <objects>
+                <viewController id="AFs-YN-Uz2" customClass="BaselineController" customModule="SensorTagNeckTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="uaW-Eg-mNu">
+                        <rect key="frame" x="0.0" y="0.0" width="771" height="409"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EQ4-KT-kUp">
+                                <rect key="frame" x="18" y="350" width="477" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="473" id="daQ-Qq-UtX"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Set up Baselines" id="9z8-9R-0M6">
+                                    <font key="font" metaFont="system" size="32"/>
+                                    <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-Eq-tPw">
+                                <rect key="frame" x="716" y="350" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mI2-Ch-ySN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ycw-tP-QTT">
+                                <rect key="frame" x="14" y="13" width="135" height="32"/>
+                                <buttonCell key="cell" type="push" title="Start Collection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="87p-pa-fQM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="doStartCollection:" target="AFs-YN-Uz2" id="XsO-GC-KzW"/>
+                                </connections>
+                            </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-ky-SYv">
+                                <rect key="frame" x="20" y="67" width="731" height="275"/>
+                                <clipView key="contentView" id="oRG-92-aWh">
+                                    <rect key="frame" x="1" y="1" width="714" height="273"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="s3c-hW-gd7">
+                                            <rect key="frame" x="0.0" y="0.0" width="714" height="273"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="714" height="273"/>
+                                            <size key="maxSize" width="816" height="10000000"/>
+                                            <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="gTw-bw-Wev">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="J8w-pb-ycA">
+                                    <rect key="frame" x="715" y="1" width="15" height="273"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKj-JA-OOg">
+                                <rect key="frame" x="624" y="13" width="133" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Stop Collection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rww-h4-f9T">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="doStopCollection:" target="AFs-YN-Uz2" id="p3L-Rx-ooK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EQ4-KT-kUp" firstAttribute="top" secondItem="uaW-Eg-mNu" secondAttribute="top" constant="20" symbolic="YES" id="0a3-K1-KkX"/>
+                            <constraint firstItem="ycw-tP-QTT" firstAttribute="top" secondItem="D7e-ky-SYv" secondAttribute="bottom" constant="26" id="0pN-wa-4kV"/>
+                            <constraint firstItem="D7e-ky-SYv" firstAttribute="top" secondItem="4Ms-Eq-tPw" secondAttribute="bottom" constant="8" symbolic="YES" id="AF3-bd-2nS"/>
+                            <constraint firstItem="D7e-ky-SYv" firstAttribute="top" secondItem="EQ4-KT-kUp" secondAttribute="bottom" constant="8" symbolic="YES" id="D3V-mp-5g0"/>
+                            <constraint firstItem="EQ4-KT-kUp" firstAttribute="leading" secondItem="uaW-Eg-mNu" secondAttribute="leading" constant="20" symbolic="YES" id="FDI-41-ldx"/>
+                            <constraint firstAttribute="bottom" secondItem="ycw-tP-QTT" secondAttribute="bottom" constant="20" symbolic="YES" id="Mqk-yn-eQr"/>
+                            <constraint firstItem="D7e-ky-SYv" firstAttribute="trailing" secondItem="4Ms-Eq-tPw" secondAttribute="trailing" id="QPm-9e-ASV"/>
+                            <constraint firstItem="ycw-tP-QTT" firstAttribute="leading" secondItem="EQ4-KT-kUp" secondAttribute="leading" id="lRg-VL-6nM"/>
+                            <constraint firstItem="ycw-tP-QTT" firstAttribute="leading" secondItem="D7e-ky-SYv" secondAttribute="leading" id="lij-GR-dmL"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ms-Eq-tPw" secondAttribute="trailing" constant="20" symbolic="YES" id="ySe-wP-hl5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="debugView" destination="s3c-hW-gd7" id="6dc-PI-Vsh"/>
+                        <outlet property="headlineLabel" destination="EQ4-KT-kUp" id="y5n-v7-n3w"/>
+                        <outlet property="nextLabel" destination="4Ms-Eq-tPw" id="1L7-sO-Fbr"/>
+                        <outlet property="startButton" destination="ycw-tP-QTT" id="GCM-Xh-FRg"/>
+                        <outlet property="stopButton" destination="IKj-JA-OOg" id="mNR-RA-hFP"/>
+                    </connections>
+                </viewController>
+                <customObject id="o1a-2b-jas" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290.5" y="1755.5"/>
         </scene>
     </scenes>
     <resources>

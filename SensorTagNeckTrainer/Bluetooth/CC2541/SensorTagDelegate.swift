@@ -8,8 +8,9 @@
 
 import Foundation
 
-protocol SensorTagDelegate {
+protocol SensorTagDelegate: ObserverProtocol {
     func Ready()
+    
     func Errored()
     
     func Accelerometer(measurement : AccelerometerMeasurement)

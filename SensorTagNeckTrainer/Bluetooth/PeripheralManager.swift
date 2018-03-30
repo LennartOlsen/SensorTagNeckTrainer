@@ -10,7 +10,7 @@ import Foundation
 import CoreBluetooth
 
 
-class PeripheralManager : NSObject, CBCentralManagerDelegate {
+class PeripheralManager : NSObject {
     
     private var D = false
     
@@ -34,7 +34,7 @@ class PeripheralManager : NSObject, CBCentralManagerDelegate {
     func connectToDevice(uuid : UUID) -> CBPeripheral! {
         print("Connecting to device!", uuid, discoveredDevices[uuid])
         if let device = discoveredDevices[uuid] {
-            self.central?.connect(device)
+            self.central?.connect(device, options: nil)
             return device
         }
         return nil
@@ -45,29 +45,20 @@ class PeripheralManager : NSObject, CBCentralManagerDelegate {
     }
 }
 
-// MARK: --- CBCentralManagerDelegate ---
-extension PeripheralManager {
+extension PeripheralManager : CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         
-        if (central.state == CBManagerState.poweredOn)
-        {
+        if (central.state == CBManagerState.poweredOn) {
             if(D){print("PeripheralDiscoverer: didUpdateState ON")}
-            
-            //Specific service
-            //let MyServiceUuid = CBUUID.init(string: "7E940010-8030-4261-8523-8953AB03CFC0")
-            //self.central?.scanForPeripherals(withServices:[MyServiceUuid], options: nil)
             
             //All serivces
             self.central?.scanForPeripherals(withServices:nil, options: nil)
-        }
-        else
-        {
+        } else {
             // do something like alert the user that ble is not on
             if(D){print("PeripheralDiscoverer: didUpdateState \(central.state.rawValue)")}
         }
     }
     
-    //MARK: --- didDiscover ---
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         let id = peripheral.identifier //iOS abstraction over hardware address to comply with privacy of the MAC address.
         
@@ -81,18 +72,14 @@ extension PeripheralManager {
         
     }
     
-    //MARK: --- didConnect ---
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        if(D){print("PeripheralDiscoverer: didConnectPeripheral: \(peripheral.state.rawValue)")}
+        if(D){print("PeripheralDiscoverer \(peripheral.name!): didConnectPeripheral: \(peripheral.state.rawValue)")}
         
         
         listenerDelegate?.didConnect(peripheralDevice: peripheral)
     }
     
-    //MARK: --- didDisconnect ---
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        if(D){print("PeripheralDiscoverer: didDisconnectPeripheral: \(peripheral.state.rawValue)")}
-        
-        
+        if(D){print("PeripheralDiscoverer \(peripheral.name!): didDisconnectPeripheral: \(peripheral.state.rawValue)")}
     }
 }

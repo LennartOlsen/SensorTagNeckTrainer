@@ -1,0 +1,4 @@
+target 'SensorTagNeckTrainer' do
+	use_frameworks!
+	pod 'Charts'
+end
