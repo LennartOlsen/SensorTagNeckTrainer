@@ -67,7 +67,7 @@ class DataEntry {
 }
 
 extension DataEntry {
-    func addMeasurement(accelerometer : AccelerometerMeasurement, magnetometer : MagnetometerMeasurement, gyroscope : GyroscopeMeasurement){
-        collections.append(MeasurementCollection(accelerometer: accelerometer, magnetometer: magnetometer, gyroscope: gyroscope))
+    func addMeasurement(accelerometer : AccelerometerMeasurement?, magnetometer : MagnetometerMeasurement?, gyroscope : GyroscopeMeasurement?){
+        collections.append(MeasurementCollection(accelerometer: accelerometer ?? nil, magnetometer: magnetometer ?? nil, gyroscope: gyroscope ?? nil))
     }
 }

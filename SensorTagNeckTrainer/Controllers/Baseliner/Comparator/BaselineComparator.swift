@@ -62,14 +62,14 @@ extension BaselineComparator : ObserverProtocol {
 }
 
 extension BaselineComparator : SensorTagDelegate {
-    func Magnetometer(measurement: MagnetometerMeasurement) {
+    func Magnetometer(measurement: MagnetometerMeasurement, uuid : UUID) {
         self.addMeasurement(measurement)
     }
     
-    func Ready() {}
-    func Errored() {}
-    func Accelerometer(measurement: AccelerometerMeasurement) {}
-    func Gyroscope(measurement: GyroscopeMeasurement) {}
-    func ReadyForCalibration() {}
-    func Calibrated(values: [[Double]]) {}
+    func Ready(uuid : UUID) {}
+    func Errored(uuid : UUID) {}
+    func Accelerometer(measurement: AccelerometerMeasurement, uuid : UUID) {}
+    func Gyroscope(measurement: GyroscopeMeasurement, uuid : UUID) {}
+    func ReadyForCalibration(uuid : UUID) {}
+    func Calibrated(values: [[Double]], uuid : UUID) {}
 }

@@ -128,7 +128,7 @@ class Baseliner {
 extension Baseliner : SensorTagDelegate {
     
     
-    func Magnetometer(measurement: MagnetometerMeasurement) {
+    func Magnetometer(measurement: MagnetometerMeasurement, uuid : UUID) {
         if(isCollecting){
             self.addMeasurement(measurement)
         }
@@ -143,15 +143,15 @@ extension Baseliner : SensorTagDelegate {
         }
     }
     
-    func Ready() {}
+    func Ready(uuid : UUID) {}
     
-    func Errored() {}
+    func Errored(uuid : UUID) {}
     
-    func Accelerometer(measurement: AccelerometerMeasurement) {}
+    func Accelerometer(measurement: AccelerometerMeasurement, uuid : UUID) {}
     
-    func Gyroscope(measurement: GyroscopeMeasurement) {}
+    func Gyroscope(measurement: GyroscopeMeasurement, uuid : UUID) {}
     
-    func ReadyForCalibration() {}
+    func ReadyForCalibration(uuid : UUID) {}
     
-    func Calibrated(values: [[Double]]) {}
+    func Calibrated(values: [[Double]], uuid : UUID) {}
 }

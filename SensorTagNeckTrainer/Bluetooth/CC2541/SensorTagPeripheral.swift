@@ -23,18 +23,20 @@ class SensorTagPeripheral : BaseBluetoothPeripheral {
     private var enableGyroValue = 7
     private var enablGyroBytes : NSData
     
-    private var fastUpdate = 10 /** [input] * 10ms = 25 * 10ms = 250ms **/
+    private var fastUpdate = 10 /** [input] * 10ms = 10 * 10ms = 100ms **/
     private var fastUpdateBytes : NSData
     
     private let D = false
+    
+    private let UUID : UUID
     
     private var latestGyro : GyroscopeMeasurement? 
     private var latestMagneto : MagnetometerMeasurement?
     private var latestAcell : AccelerometerMeasurement?
     
-    private var requestedAccelerometer = false
-    private var requestedGyroscope = false
-    private var requestedMagenetometer = false
+    private(set) var requestedAccelerometer = false
+    private(set) var requestedGyroscope = false
+    private(set) var requestedMagenetometer = false
     
     var ready = false
     
@@ -43,6 +45,7 @@ class SensorTagPeripheral : BaseBluetoothPeripheral {
     init(device: CBPeripheral) {
         self.enablGyroBytes = NSData(bytes: &enableGyroValue, length: MemoryLayout<UInt8>.size)
         self.fastUpdateBytes = NSData(bytes: &fastUpdate, length : MemoryLayout<UInt8>.size)
+        self.UUID = device.identifier
         super.init(peripheral : device,
                    validCharacteristics: SENSORTAG_CHARACTERISTICS.array,
                    validServices: SENSORTAG_SERVICES.array,
@@ -67,7 +70,7 @@ class SensorTagPeripheral : BaseBluetoothPeripheral {
                                   gyroValue: [gyro.x,gyro.y,gyro.z])
         
         for observer in super.observers() {
-            observer.Calibrated(values: controller.getCalibrationValues())
+            observer.Calibrated(values: controller.getCalibrationValues(), uuid: self.UUID)
         }
     }
     
@@ -93,14 +96,12 @@ extension SensorTagPeripheral : CBPeripheralDelegate {
         if super.handleDidDiscoverCharacteristic(peripheral: peripheral, service : service) {
             
             for observer in super.observers() {
-                observer.Ready()
+                observer.Ready(uuid: self.UUID)
             }
             ready = true
             
         }
     }
-    
-    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor descriptor: CBDescriptor, error: Error?) { /** We only listen to characteristics **/ }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if(D){print("PeripheralDiscoverer: didUpdateValueForCharacteristic")}
@@ -110,25 +111,25 @@ extension SensorTagPeripheral : CBPeripheralDelegate {
                 latestAcell = controller.getAccelerometerData(value: characteristic.value! as NSData )
                 
                 for observer in super.observers() {
-                    observer.Accelerometer(measurement: latestAcell!)
+                    observer.Accelerometer(measurement: latestAcell!, uuid: self.UUID)
                 }
             }
             if characteristic.uuid == SENSORTAG_CHARACTERISTICS.TI_SENSORTAG_MAGNETOMETER_DATA {
                 latestMagneto = controller.getMagnetometerData(value: characteristic.value! as NSData )
                 
                 for observer in super.observers() {
-                    observer.Magnetometer(measurement: latestMagneto!)
+                    observer.Magnetometer(measurement: latestMagneto!, uuid: self.UUID)
                 }
             }
             if characteristic.uuid == SENSORTAG_CHARACTERISTICS.TI_SENSORTAG_GYROSCOPE_DATA {
                 latestGyro = controller.getGyroscopeData(value: characteristic.value! as NSData )
                 for observer in super.observers() {
-                    observer.Gyroscope(measurement: latestGyro!)
+                    observer.Gyroscope(measurement: latestGyro!, uuid: self.UUID)
                 }
             }
             if(readyForCalibration()){
                 for observer in super.observers() {
-                    observer.ReadyForCalibration()
+                    observer.ReadyForCalibration(uuid: self.UUID)
                 }
             }
         }

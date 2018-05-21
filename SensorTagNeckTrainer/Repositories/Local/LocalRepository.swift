@@ -15,34 +15,35 @@ class LocalRepository {
     
     private let D = true
     
-    init(file : String = "output.txt"){
+    init(file : String = "output.csv"){
         /** Establish 'Connection' **/
         self.file = file
         self.dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         self.locationURL = dir!.appendingPathComponent(file)
         
-        if(D){print("Opened connection to \(locationURL)")}
+        if(D){print("Opened connection to \(String(describing: locationURL))")}
     }
     
-    func put(data : String){
+    func update(data : String){
         do {
             if let url = locationURL{
-                try data.write(to: url, atomically: false, encoding: .utf8)
+                let composedData = try self.read() + data
+                try composedData.write(to: url, atomically: false, encoding: .utf8)
             }
         }
         catch {
-            print("WARNING : Could not write to file \(locationURL) \(error)")
+            print("WARNING : Could not write to file \(String(describing: locationURL)) \(error)")
         }
     }
     
-    func get() -> String{
+    func read() -> String{
         do {
             if let url = locationURL{
                 return try String(contentsOf: url, encoding: .utf8)
             }
         }
         catch {
-            print("WARNING : Could not read from file \(locationURL) \(error)")
+            print("WARNING : Could not read from file \(String(describing: locationURL)) \(error)")
         }
         return ""
     }

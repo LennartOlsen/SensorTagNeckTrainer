@@ -14,7 +14,6 @@
 		7028C4CC204473BE0067D7A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7028C4CA204473BE0067D7A9 /* Main.storyboard */; };
 		7028C4D8204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4D7204473BE0067D7A9 /* SensorTagNeckTrainerTests.swift */; };
 		7028C4E3204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */; };
-		7028C4F5204474650067D7A9 /* timeFramedActivityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F4204474650067D7A9 /* timeFramedActivityClassifier.mlmodel */; };
 		7028C508204474AA0067D7A9 /* SensorTagConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F8204474A90067D7A9 /* SensorTagConstants.swift */; };
 		7028C509204474AA0067D7A9 /* SensorTagDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4F9204474A90067D7A9 /* SensorTagDelegate.swift */; };
 		7028C50A204474AA0067D7A9 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028C4FA204474A90067D7A9 /* Controller.swift */; };
@@ -33,6 +32,9 @@
 		7030415E2065772200DC3DB3 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030415D2065772200DC3DB3 /* LocalRepository.swift */; };
 		703A1B0A2056DF9A000DBB0A /* SDUConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A1B092056DF9A000DBB0A /* SDUConstants.swift */; };
 		703A1B0C2056E30E000DBB0A /* SDUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A1B0B2056E30E000DBB0A /* SDUPeripheral.swift */; };
+		7041F580206E74D400908081 /* DataCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7041F57E206E74D400908081 /* DataCollector.swift */; };
+		7041F5872070F8AE00908081 /* PredictionCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7041F5862070F8AE00908081 /* PredictionCollector.swift */; };
+		7041F5892070F8EC00908081 /* PredictionCollectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7041F5882070F8EC00908081 /* PredictionCollectorDelegate.swift */; };
 		7049379720496EC700A9BF4B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7049379620496EC700A9BF4B /* MainController.swift */; };
 		7049379C20496F5500A9BF4B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7049379B20496F5500A9BF4B /* Colors.swift */; };
 		7049379E2049796C00A9BF4B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7049379D2049796C00A9BF4B /* Fonts.swift */; };
@@ -42,6 +44,11 @@
 		704A87C1205C0452004443FB /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87C0205C0452004443FB /* ObserverProtocol.swift */; };
 		704A87C4205C0543004443FB /* BaseBluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704A87C3205C0543004443FB /* BaseBluetoothPeripheral.swift */; };
 		706B27D020480B7100E94EEE /* ObserverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B27CF20480B7100E94EEE /* ObserverController.swift */; };
+		7086C2B92073D986002A84C8 /* activityClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7086C2B82073D985002A84C8 /* activityClassifier.mlmodel */; };
+		7086C2BC2084B809002A84C8 /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086C2BB2084B809002A84C8 /* PredictionViewController.swift */; };
+		7086C2BF208600AB002A84C8 /* PerformanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086C2BE208600AB002A84C8 /* PerformanceController.swift */; };
+		7086C2C1208620EE002A84C8 /* PerformanceMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086C2C0208620EE002A84C8 /* PerformanceMetric.swift */; };
+		7086C2C320864526002A84C8 /* PerformanceControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086C2C220864526002A84C8 /* PerformanceControllerDelegate.swift */; };
 		709B4BB8206478C600633CA9 /* bendForward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAB206478C400633CA9 /* bendForward.mp3 */; };
 		709B4BB9206478C600633CA9 /* lookToTheRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAC206478C400633CA9 /* lookToTheRight.mp3 */; };
 		709B4BBA206478C600633CA9 /* resumeNeutral.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 709B4BAD206478C500633CA9 /* resumeNeutral.mp3 */; };
@@ -95,7 +102,6 @@
 		7028C4DE204473BE0067D7A9 /* SensorTagNeckTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTagNeckTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7028C4E2204473BE0067D7A9 /* SensorTagNeckTrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTagNeckTrainerUITests.swift; sourceTree = "<group>"; };
 		7028C4E4204473BE0067D7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7028C4F4204474650067D7A9 /* timeFramedActivityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = timeFramedActivityClassifier.mlmodel; path = ../../../../SensorTagRaiderDataSet/jupyter/timeFramedActivityClassifier.mlmodel; sourceTree = "<group>"; };
 		7028C4F8204474A90067D7A9 /* SensorTagConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTagConstants.swift; sourceTree = "<group>"; };
 		7028C4F9204474A90067D7A9 /* SensorTagDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTagDelegate.swift; sourceTree = "<group>"; };
 		7028C4FA204474A90067D7A9 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 		7030415D2065772200DC3DB3 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
 		703A1B092056DF9A000DBB0A /* SDUConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUConstants.swift; sourceTree = "<group>"; };
 		703A1B0B2056E30E000DBB0A /* SDUPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUPeripheral.swift; sourceTree = "<group>"; };
+		7041F57E206E74D400908081 /* DataCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollector.swift; sourceTree = "<group>"; };
+		7041F5862070F8AE00908081 /* PredictionCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCollector.swift; sourceTree = "<group>"; };
+		7041F5882070F8EC00908081 /* PredictionCollectorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCollectorDelegate.swift; sourceTree = "<group>"; };
 		7049379620496EC700A9BF4B /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		7049379B20496F5500A9BF4B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7049379D2049796C00A9BF4B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -123,6 +132,11 @@
 		704A87C0205C0452004443FB /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
 		704A87C3205C0543004443FB /* BaseBluetoothPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBluetoothPeripheral.swift; sourceTree = "<group>"; };
 		706B27CF20480B7100E94EEE /* ObserverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverController.swift; sourceTree = "<group>"; };
+		7086C2B82073D985002A84C8 /* activityClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = activityClassifier.mlmodel; path = ../../../../SensorTagRaiderDataSet/jupyter/activityClassifier.mlmodel; sourceTree = "<group>"; };
+		7086C2BB2084B809002A84C8 /* PredictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
+		7086C2BE208600AB002A84C8 /* PerformanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceController.swift; sourceTree = "<group>"; };
+		7086C2C0208620EE002A84C8 /* PerformanceMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceMetric.swift; sourceTree = "<group>"; };
+		7086C2C220864526002A84C8 /* PerformanceControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceControllerDelegate.swift; sourceTree = "<group>"; };
 		709B4BAB206478C400633CA9 /* bendForward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bendForward.mp3; sourceTree = "<group>"; };
 		709B4BAC206478C400633CA9 /* lookToTheRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lookToTheRight.mp3; sourceTree = "<group>"; };
 		709B4BAD206478C500633CA9 /* resumeNeutral.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = resumeNeutral.mp3; sourceTree = "<group>"; };
@@ -235,7 +249,7 @@
 		7028C4F2204474480067D7A9 /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				7028C4F4204474650067D7A9 /* timeFramedActivityClassifier.mlmodel */,
+				7086C2B82073D985002A84C8 /* activityClassifier.mlmodel */,
 			);
 			path = CoreML;
 			sourceTree = "<group>";
@@ -267,6 +281,7 @@
 		7028C4FF204474A90067D7A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7086C2BD20860077002A84C8 /* Performance */,
 				709B4BC72064790F00633CA9 /* SoundPlayer */,
 				704A87B6205BEACA004443FB /* Baseliner */,
 				7028C500204474A90067D7A9 /* Collector */,
@@ -287,6 +302,7 @@
 		7028C503204474A90067D7A9 /* Predictor */ = {
 			isa = PBXGroup;
 			children = (
+				7041F5852070F88100908081 /* Collector */,
 				7028C504204474A90067D7A9 /* Predictor.swift */,
 			);
 			path = Predictor;
@@ -298,6 +314,7 @@
 				7028C506204474AA0067D7A9 /* Measurement.swift */,
 				7028C507204474AA0067D7A9 /* DataEntry.swift */,
 				704A87B9205BEB3F004443FB /* Baseline.swift */,
+				7086C2C0208620EE002A84C8 /* PerformanceMetric.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +322,8 @@
 		7028C51B20447A100067D7A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7086C2BA2084B7EE002A84C8 /* Prediction */,
+				7041F57D206E74BF00908081 /* DataCollector */,
 				70CF8F4020601C8A00718BDC /* Baseline */,
 				7049379820496ED400A9BF4B /* Main */,
 				706B27CE20480B5000E94EEE /* Observer */,
@@ -362,6 +381,23 @@
 				703A1B0B2056E30E000DBB0A /* SDUPeripheral.swift */,
 			);
 			path = SDU;
+			sourceTree = "<group>";
+		};
+		7041F57D206E74BF00908081 /* DataCollector */ = {
+			isa = PBXGroup;
+			children = (
+				7041F57E206E74D400908081 /* DataCollector.swift */,
+			);
+			path = DataCollector;
+			sourceTree = "<group>";
+		};
+		7041F5852070F88100908081 /* Collector */ = {
+			isa = PBXGroup;
+			children = (
+				7041F5862070F8AE00908081 /* PredictionCollector.swift */,
+				7041F5882070F8EC00908081 /* PredictionCollectorDelegate.swift */,
+			);
+			path = Collector;
 			sourceTree = "<group>";
 		};
 		7049379820496ED400A9BF4B /* Main */ = {
@@ -422,6 +458,23 @@
 				706B27CF20480B7100E94EEE /* ObserverController.swift */,
 			);
 			path = Observer;
+			sourceTree = "<group>";
+		};
+		7086C2BA2084B7EE002A84C8 /* Prediction */ = {
+			isa = PBXGroup;
+			children = (
+				7086C2BB2084B809002A84C8 /* PredictionViewController.swift */,
+			);
+			path = Prediction;
+			sourceTree = "<group>";
+		};
+		7086C2BD20860077002A84C8 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				7086C2BE208600AB002A84C8 /* PerformanceController.swift */,
+				7086C2C220864526002A84C8 /* PerformanceControllerDelegate.swift */,
+			);
+			path = Performance;
 			sourceTree = "<group>";
 		};
 		709B4BAA206478B500633CA9 /* Sounds */ = {
@@ -692,11 +745,13 @@
 				70CF8F4420601CF000718BDC /* BaselineController.swift in Sources */,
 				7028C4C7204473BE0067D7A9 /* ViewController.swift in Sources */,
 				7028C50C204474AA0067D7A9 /* PeripheralManager.swift in Sources */,
+				7086C2C1208620EE002A84C8 /* PerformanceMetric.swift in Sources */,
+				7041F5872070F8AE00908081 /* PredictionCollector.swift in Sources */,
 				706B27D020480B7100E94EEE /* ObserverController.swift in Sources */,
-				7028C4F5204474650067D7A9 /* timeFramedActivityClassifier.mlmodel in Sources */,
 				7049379720496EC700A9BF4B /* MainController.swift in Sources */,
 				7028C524204535900067D7A9 /* OwningViewControllerDelegate.swift in Sources */,
 				704A87C4205C0543004443FB /* BaseBluetoothPeripheral.swift in Sources */,
+				7086C2C320864526002A84C8 /* PerformanceControllerDelegate.swift in Sources */,
 				703A1B0C2056E30E000DBB0A /* SDUPeripheral.swift in Sources */,
 				703A1B0A2056DF9A000DBB0A /* SDUConstants.swift in Sources */,
 				7028C4C5204473BE0067D7A9 /* AppDelegate.swift in Sources */,
@@ -709,16 +764,21 @@
 				704A87B8205BEAE1004443FB /* Baseliner.swift in Sources */,
 				70C3AFB020691A8B0021EF3B /* BaselineComparatorDelegate.swift in Sources */,
 				704A87C1205C0452004443FB /* ObserverProtocol.swift in Sources */,
+				7086C2BF208600AB002A84C8 /* PerformanceController.swift in Sources */,
 				7049379C20496F5500A9BF4B /* Colors.swift in Sources */,
 				70C3AFAE20690DAD0021EF3B /* BaselineComparator.swift in Sources */,
+				7086C2B92073D986002A84C8 /* activityClassifier.mlmodel in Sources */,
 				7028C51A20447A0A0067D7A9 /* ConnectController.swift in Sources */,
 				7028C512204474AA0067D7A9 /* Measurement.swift in Sources */,
 				7028C510204474AA0067D7A9 /* CollectorListenerDelegate.swift in Sources */,
 				7028C50A204474AA0067D7A9 /* Controller.swift in Sources */,
 				7028C511204474AA0067D7A9 /* Predictor.swift in Sources */,
+				7041F580206E74D400908081 /* DataCollector.swift in Sources */,
 				7028C508204474AA0067D7A9 /* SensorTagConstants.swift in Sources */,
+				7041F5892070F8EC00908081 /* PredictionCollectorDelegate.swift in Sources */,
 				7028C50E204474AA0067D7A9 /* PeripheralListenerDelegate.swift in Sources */,
 				709B4BC6206478F900633CA9 /* SoundPlayer.swift in Sources */,
+				7086C2BC2084B809002A84C8 /* PredictionViewController.swift in Sources */,
 				7028C50F204474AA0067D7A9 /* Collector.swift in Sources */,
 				70CF8F3F205FD79C00718BDC /* BaselinerDelegate.swift in Sources */,
 				704A87BF205C03D1004443FB /* ObserverPattern.swift in Sources */,

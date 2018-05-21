@@ -44,10 +44,16 @@ class MeasurementCollection {
     
     let timeStamp : Int
     
-    init(accelerometer : AccelerometerMeasurement, magnetometer : MagnetometerMeasurement, gyroscope : GyroscopeMeasurement, _ timeStamp : Int? = nil){
-        measurements.append(accelerometer)
-        measurements.append(magnetometer)
-        measurements.append(gyroscope)
+    init(accelerometer : AccelerometerMeasurement?, magnetometer : MagnetometerMeasurement?, gyroscope : GyroscopeMeasurement?, _ timeStamp : Int? = nil){
+        if let m = accelerometer {
+            measurements.append(m)
+        }
+        if let m = magnetometer {
+            measurements.append(m)
+        }
+        if let m = gyroscope {
+            measurements.append(m)
+        }
         if let ts = timeStamp{
             self.timeStamp = ts
         } else {

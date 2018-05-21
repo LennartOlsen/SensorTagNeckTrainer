@@ -12,72 +12,85 @@ class Collector {
     
     var timer: DispatchSourceTimer?
     
-    let device : SensorTagPeripheral
+    let devices : [UUID : SensorTagPeripheral]
     
     let listenerDelegate : CollectorListenerDelegate!
     
     var dataEntry : DataEntry?
     
     var accelerometer : AccelerometerMeasurement?
+    var gotNewAccelerometer = false
+    var requiresAccelerometer = false
     var gyroscope : GyroscopeMeasurement?
+    var gotNewGyroscope = false
+    var requiresGyroscope = false
     var magnetometer : MagnetometerMeasurement?
+    var gotNewMagnetometer = false
+    var requiresMagnetometer = false
     
-    init(device : SensorTagPeripheral, delegate : CollectorListenerDelegate?){
-        self.device = device
+    var dataDelivered = [UUID : Measurement?]()
+    
+    private var count = 0
+    
+    init(devices : [UUID : SensorTagPeripheral], delegate : CollectorListenerDelegate?){
+        self.devices = devices
         listenerDelegate = delegate
         
-        device.attach(observer: self)
+        for (uuid, device) in devices {
+            device.attach(observer: self)
+            dataDelivered[uuid] = nil
+        }
     }
     
-    func doCollect(time : Double, type : DataEntryTypes){
-        
+    
+    func doCollect(count : Int, type : DataEntryTypes){
         dataEntry = DataEntry(type: type, id: UUID().uuidString)
-        
-        let when =  DispatchTime.now() + time
-        
-        self.startMeasurementCollection()
-        
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.stopMeasurementCollection()
-            if let d = self.listenerDelegate {
-                if let data = self.dataEntry {
-                    self.accelerometer = nil
-                    self.gyroscope = nil
-                    self.magnetometer = nil
-                    d.collectionIsFinished(dataEntry : data)
+        self.count = count
+    }
+    
+    func checkAppend(_ m : Measurement, _ uuid : UUID){
+        if count <= 0 {
+            return
+        }
+        var good = true
+        for dataTest in dataDelivered {
+            if let d = dataTest.value {
+                if let m = d as? AccelerometerMeasurement {
+                    self.accelerometer = m
                 }
+                if let m = d as? MagnetometerMeasurement {
+                    self.magnetometer = m
+                }
+                if let m = d as? GyroscopeMeasurement {
+                    self.gyroscope = m
+                }
+            } else {
+                good = false
             }
         }
-        
-    }
-    
-    func startMeasurementCollection(){
-        let queue = DispatchQueue(label : "net.lennartolsen.SensorTagCollector.Collector")
-        
-        timer = DispatchSource.makeTimerSource(queue: queue)
-        timer!.schedule(deadline: .now() + .milliseconds(333), repeating: .milliseconds(333))
-        timer!.setEventHandler { [weak self] in
-            if let a = self?.accelerometer, let m = self?.magnetometer, let g = self?.gyroscope {
-                self?.dataEntry?.addMeasurement(accelerometer: a,
-                                                magnetometer: m,
-                                                gyroscope: g)
+        if( good ){
+            self.dataEntry?.addMeasurement(accelerometer: self.accelerometer, magnetometer: self.magnetometer, gyroscope: self.gyroscope)
+            
+            for entity in dataDelivered {
+                dataDelivered.updateValue(nil, forKey: entity.key)
+            }
+            
+            self.count = self.count - 1;
+            if(self.count == 0){
+                listenerDelegate.collectionIsFinished(dataEntry: self.dataEntry!)
             }
         }
-        timer!.resume()
     }
-    
-    func stopMeasurementCollection() {
-        timer?.cancel()
-        timer = nil
-    }
-    
     // make sure that collection is always stopped
     deinit {
-        stopMeasurementCollection()
+        for (_,device) in devices {
+            device.remove(observer: self)
+        }
     }
 }
 
 extension Collector : SensorTagDelegate {
+    
     var id: String {
         get {
             return "Collector"
@@ -85,25 +98,31 @@ extension Collector : SensorTagDelegate {
     }
     
     
-    func Accelerometer(measurement: AccelerometerMeasurement) {
+    func Accelerometer(measurement: AccelerometerMeasurement, uuid : UUID) {
         accelerometer = measurement
+        dataDelivered[uuid] = measurement
+        checkAppend(measurement, uuid)
     }
     
-    func Magnetometer(measurement: MagnetometerMeasurement) {
+    func Magnetometer(measurement: MagnetometerMeasurement, uuid : UUID) {
         magnetometer = measurement
+        dataDelivered[uuid] = measurement
+        checkAppend(measurement, uuid)
     }
     
-    func Gyroscope(measurement: GyroscopeMeasurement) {
+    func Gyroscope(measurement: GyroscopeMeasurement, uuid : UUID) {
         gyroscope = measurement
+        dataDelivered[uuid] = measurement
+        checkAppend(measurement, uuid)
     }
     
-    func Calibrated(values: [[Double]]) {}
+    func Ready(uuid: UUID) {}
     
-    func Ready() {}
+    func Errored(uuid: UUID) {}
     
-    func Errored() {}
+    func ReadyForCalibration(uuid: UUID) {}
     
-    func ReadyForCalibration() {}
+    func Calibrated(values: [[Double]], uuid: UUID) {}
     
     
 }

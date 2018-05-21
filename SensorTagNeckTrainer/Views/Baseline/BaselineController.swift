@@ -55,7 +55,9 @@ class BaselineController: NSViewController {
     
     private func cleanup(){
         print("BaselineController cleanup")
+        if( baseliner != nil ){
         baseliner.stop()
+        }
         baseliner = nil
     }
     

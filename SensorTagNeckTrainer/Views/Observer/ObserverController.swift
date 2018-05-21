@@ -12,7 +12,7 @@ import Charts
 class ObserverController: NSView {
     var lineChartView: LineChartView!
     
-    private var cutOff = 50.0
+    private var cutOff = 30.0
     private var lowX = 0.0
     private var x = 0.0
     

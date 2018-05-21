@@ -9,17 +9,17 @@
 import Foundation
 
 protocol SensorTagDelegate: ObserverProtocol {
-    func Ready()
+    func Ready(uuid: UUID)
     
-    func Errored()
+    func Errored(uuid: UUID)
     
-    func Accelerometer(measurement : AccelerometerMeasurement)
+    func Accelerometer(measurement : AccelerometerMeasurement, uuid : UUID)
     
-    func Magnetometer(measurement : MagnetometerMeasurement)
+    func Magnetometer(measurement : MagnetometerMeasurement, uuid : UUID)
     
-    func Gyroscope(measurement : GyroscopeMeasurement)
+    func Gyroscope(measurement : GyroscopeMeasurement, uuid : UUID)
     
-    func ReadyForCalibration()
+    func ReadyForCalibration(uuid: UUID)
     
-    func Calibrated(values : [[Double]]) /** Accelerometer, magnetometer, Gyroscope, all x,y,z **/
+    func Calibrated(values : [[Double]], uuid : UUID) /** Accelerometer, magnetometer, Gyroscope, all x,y,z **/
 }

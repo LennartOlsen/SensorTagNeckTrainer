@@ -59,13 +59,6 @@ extension ConnectController : BluetoothListenerDelegate  {
                 connectButton.isEnabled = true
             }
         }
-        /*if(SDUPeripheral.validate(device: peripheralDevice)){
-            if pm.connectToDevice(uuid: peripheralDevice.identifier) == nil {
-                print("damnit")
-            }
-            
-            pm.stopScan()
-        }*/
     }
     
     func didConnect(peripheralDevice: CBPeripheral) {
@@ -80,12 +73,5 @@ extension ConnectController : BluetoothListenerDelegate  {
                 }
             }
         }
-        /*if(SDUPeripheral.validate(device: peripheralDevice)){
-            print("Connected To SDU Conntroller")
-            sduDevice = SDUPeripheral(peripheral : peripheralDevice)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.sduDevice.setup() 
-            }
-        }*/
     }
 }
